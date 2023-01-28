@@ -26,20 +26,20 @@
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top img-card" src="{{ asset('/assets/img/'.$product['image'])}}" alt="..." />
+                    <img class="card-img-top img-card" src="{{ asset('/assets/img/'.$product->getImage())}}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder"> {{$product['name']}} </h5>
+                            <h5 class="fw-bolder"> {{$product->getName()}} </h5>
                             <!-- Product price-->
-                            $ {{$product['price']}}
+                            $ {{$product->getPrice()}}
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center"><a class="btn btn-outline-dark mt-auto"
-                                href="{{route('product.show',['id'=>$product['id']])}}">View</a></div>
+                                href="{{route('product.show',['id'=>$product->getId()])}}">View</a></div>
                     </div>
                 </div>
             </div>
