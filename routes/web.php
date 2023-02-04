@@ -21,3 +21,6 @@ Route::get('/','App\Http\Controllers\HomeController@index')->name("home.index");
 ### Products display
 Route::get('/product','App\Http\Controllers\ProductController@index')->name('product.index');
 Route::get('/product/{id}','App\Http\Controllers\ProductController@show')->name('product.show');
+
+### Admin routes
+Route::get('/admin','App\Http\Controllers\AdminController@index')->name('admin.index');
