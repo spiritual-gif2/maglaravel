@@ -24,3 +24,6 @@ Route::get('/product/{id}','App\Http\Controllers\ProductController@show')->name(
 
 ### Admin routes
 Route::get('/admin','App\Http\Controllers\AdminController@index')->name('admin.index');
+
+### Products
+Route::get('/admin/products/list','\App\Http\Controllers\AdminController@list')->name('admin.products.list');
