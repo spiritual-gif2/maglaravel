@@ -26,7 +26,7 @@
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top img-card" src="{{ asset('/assets/img/'.$product->getImage())}}" alt="..." />
+                    <img class="card-img-top img-card img-product" src="{{ asset('/storage/'.$product->getImage())}}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">

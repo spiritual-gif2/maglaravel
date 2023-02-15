@@ -16,12 +16,5 @@ class AdminController extends Controller
     }
 
 
-    // list
-    public function list(){
-        $viewData = [];
-        $viewData['title'] = 'Admin Products';
-        $viewData['products'] = Product::all();
-
-        return view('admin.index')->with('viewData',$viewData);
-    }
+    
 }

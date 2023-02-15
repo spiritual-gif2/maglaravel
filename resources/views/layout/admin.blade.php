@@ -24,6 +24,11 @@
         font-size: 80%;
         font-weight: 400;
     }
+
+    .img-product {
+        height: auto;
+        width: 1em;
+    }
     </style>
 </head>
 
@@ -39,7 +44,7 @@
             <nav>
                 <ul class="nav flex-column flex-center">
                     <li><a href="{{ route('admin.index')}}" class="nav-link fs-5 text-white">Admin - Home</a></li>
-                    <li><a href="#" class="nav-link fs-5 text-white">Admin - Products</a></li>
+                    <li><a href="{{ route('admin.product.list')}}" class="nav-link fs-5 text-white">Admin - Products</a></li>
                     <li><a href="{{ route('home.index') }}" class="m-3 btn bg-secondary nav-link fs-5 text-white">Go
                             Back to Site</a></li>
                 </ul>
@@ -63,11 +68,12 @@
 
 
     <!-- Footer -->
-    <div class="copyright py-4 text-center text-white">
+    <div class="bg-secondary copyright py-4 text-center text-white">
         <div class="container"><small>Copyright &copy; MAD Corp</small></div>
     </div>
 
 </body>
 
 <script src="{{ asset('/js/bootstrap.bundle.js')}}"></script>
+<script src="{{ asset('/js/all.js')}}"></script>
 </html>
