@@ -1,0 +1,6 @@
+INSERT INTO products(id, name, description, image, quantity, price,  created_at, updated_at) VALUES (NULL,'TV', 'TV Description', 'game.png', 5, 224, '2023-01-28 18:17:39', '2023-01-28 18:17:39');
+INSERT INTO products(id, name, description, image, quantity, price,  created_at, updated_at) VALUES (NULL,'iPhone', 'iPhone Description', 'cabin.png', 5, 224, '2023-01-28 18:17:39', '2023-01-28 18:17:39');
+INSERT INTO products(id, name, description, image, quantity, price, created_at, updated_at) VALUES (NULL,'Glasses', 'Glasses Description', 'cake.png', 7, 984, '2023-01-28 18:17:39', '2023-01-28 18:17:39');
+INSERT INTO products(id, name, description, image, quantity, price, created_at, updated_at) VALUES (NULL,'Gloves', 'Gloves Description', 'circus.png', 4, 584, '2023-01-28 18:17:39', '2023-01-28 18:17:39');
+INSERT INTO products(id, name, description, image, quantity, price, created_at, updated_at) VALUES (NULL,'Game Pad', 'Game Pad Description', 'safe.png', 6, 245, '2023-01-28 18:17:39', '2023-01-28 18:17:39');
+INSERT INTO products(id, name, description, image, quantity, price, created_at, updated_at) VALUES (NULL,'Sweat Case', 'Sweat Case Description', 'submarine.png', 5, 2478, '2023-01-28 18:17:39', '2023-01-28 18:17:39');
