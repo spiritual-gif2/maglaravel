@@ -27,16 +27,27 @@ class AdminProductController extends Controller
         $viewData['title'] = 'Admin New Product';
         return view('admin.product.add')->with('viewData',$viewData);
     }
+
+
     // add new product to the store receive the data from the form
     public function store(Request $request)
     {
-        Product::validate($request);
+        //Product::validate($request);
+
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'description' => 'required|string',
+            'price' => 'required|numeric|gt:10',
+            'quantity' => 'required|numeric|gt:1',
+            'image' => 'image'
+        ]);
 
         $newProduct = new Product();
         $newProduct->setName($request->input('name'));
         $newProduct->setDescription($request->input('description'));
         $newProduct->setPrice($request->input('price'));
         $newProduct->setQuantity($request->input('quantity'));
+        $newProduct->setImage('game.png');
         $newProduct->save();
         
         //part about the uploading of the image to laravel storage
@@ -73,7 +84,13 @@ class AdminProductController extends Controller
     // edit the data of a product - updating the value
     public function update(Request $request,$id)
     {
-        Product::validate($request);
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'description' => 'required|string',
+            'price' => 'required|numeric|gt:10',
+            'quantity' => 'required|numeric|gt:1',
+            'image' => 'image'
+        ]);
 
         $product = Product::findOrFail($id);
         $product->setName($request->input('name'));
